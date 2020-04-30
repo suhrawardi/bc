@@ -11,7 +11,7 @@ using bc.Specs.Utilities.Soap.Generated;
 namespace bc.Specs.Steps
 {
     [Binding]
-    public class SoapSteps : BaseSteps
+    public class KlantenSoapServiceSteps : BaseSteps
     {
         private string username;
         private string password;
@@ -19,13 +19,13 @@ namespace bc.Specs.Steps
         private string env;
         private string company;
 
-        private Klanten_Soap_Client soapClient;
+        private KlantenServiceClient soapClient;
         private Klanten[] result;
 
-        public SoapSteps(FeatureContext featureContext,
-                         ScenarioContext scenarioContext,
-                         ITestOutputHelper testOutputHelper) :
-                         base(featureContext, scenarioContext, testOutputHelper)
+        public KlantenSoapServiceSteps(FeatureContext featureContext,
+                                       ScenarioContext scenarioContext,
+                                       ITestOutputHelper testOutputHelper) :
+                                       base(featureContext, scenarioContext, testOutputHelper)
         {
             this.username = this.GetEnv("NAV_USER");
             this.password = this.GetEnv("NAV_PASSWORD");
@@ -46,11 +46,11 @@ namespace bc.Specs.Steps
         [Given(@"a klanten SOAP endpoint")]
         public void GivenAContractDetailsSoapEndpoint()
         {
-            this.soapClient = new Klanten_Soap_Client(this.host,
-                                                      this.env,
-                                                      this.company,
-                                                      this.username,
-                                                      this.password);
+            this.soapClient = new KlantenServiceClient(this.host,
+                                                       this.env,
+                                                       this.company,
+                                                       this.username,
+                                                       this.password);
         }
 
         [When(@"I fetch the first (.*) records from the SOAP endpoint")]

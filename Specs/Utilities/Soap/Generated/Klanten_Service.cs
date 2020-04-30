@@ -25,7 +25,7 @@ namespace bc.Specs.Utilities.Soap.Generated {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="Klanten_Binding", Namespace="urn:microsoft-dynamics-schemas/page/klanten")]
-    public partial class Klanten_Service : System.Web.Services.Protocols.SoapHttpClientProtocol {
+    public partial class Klanten_Service : bc.Specs.Utilities.Soap.BaseClient {
         
         private System.Threading.SendOrPostCallback ReadOperationCompleted;
         
