@@ -1,0 +1,11 @@
+/.env
+/.vs
+
+/Specs/*.feature.cs
+
+/bin/Debug
+/obj/Debug
+
+/obj/project.nuget.cache
+
+/report/screenshots/*.png

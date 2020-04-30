@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Jarra\\Workspace\\bc\\bc.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Jarra\\Workspace\\bc\\bc.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jarra\\Workspace\\bc\\bc.csproj",
+        "projectName": "bc",
+        "projectPath": "C:\\Users\\Jarra\\Workspace\\bc\\bc.csproj",
+        "packagesPath": "C:\\Users\\Jarra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jarra\\Workspace\\bc\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jarra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Linq": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.2.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.9.0, )"
+            },
+            "Net": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[81.0.4044.6900, )"
+            },
+            "Selenium.Webdriver": {
+              "target": "Package",
+              "version": "[3.141.0, )"
+            },
+            "ServiceModel": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "SpecFlow": {
+              "target": "Package",
+              "version": "[3.1.97, )"
+            },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[3.1.97, )"
+            },
+            "SpecFlow.xUnit": {
+              "target": "Package",
+              "version": "[3.1.97, )"
+            },
+            "Text": {
+              "target": "Package",
+              "version": "[0.0.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

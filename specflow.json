@@ -1,0 +1,12 @@
+{
+    "cucumber-messages":
+    {
+        "enabled": true,
+        "sinks": [
+            { "type":"file", "path": "custom_cucumber_messages_file.cm" }
+        ]
+    },
+    "language": {
+        "feature": "en-US"
+    }
+}
