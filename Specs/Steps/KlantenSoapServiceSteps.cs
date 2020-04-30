@@ -11,37 +11,15 @@ using bc.Specs.Utilities.Soap.Generated;
 namespace bc.Specs.Steps
 {
     [Binding]
-    public class KlantenSoapServiceSteps : BaseSteps
+    public class KlantenSoapServiceSteps : SoapSteps
     {
-        private string username;
-        private string password;
-        private string host;
-        private string env;
-        private string company;
-
         private KlantenServiceClient soapClient;
         private Klanten[] result;
 
         public KlantenSoapServiceSteps(FeatureContext featureContext,
                                        ScenarioContext scenarioContext,
                                        ITestOutputHelper testOutputHelper) :
-                                       base(featureContext, scenarioContext, testOutputHelper)
-        {
-            this.username = this.GetEnv("NAV_USER");
-            this.password = this.GetEnv("NAV_PASSWORD");
-            this.host = this.GetEnv("SOAP_HOST");
-            this.env = this.GetEnv("ENVIRONMENT");
-            this.company = this.GetEnv("COMPANY");
-        }
-
-        [BeforeScenario(Order = 0)]
-        public void DoItBeforeHand()
-        {
-            this.Debug(this.username);
-            this.Debug(this.password);
-            this.Debug(this.env);
-            this.Debug(this.host);
-        }
+                                       base(featureContext, scenarioContext, testOutputHelper) { }
 
         [Given(@"a klanten SOAP endpoint")]
         public void GivenAContractDetailsSoapEndpoint()
