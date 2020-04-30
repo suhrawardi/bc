@@ -46,14 +46,11 @@ namespace bc.Specs.Steps
         [Given(@"a klanten SOAP endpoint")]
         public void GivenAContractDetailsSoapEndpoint()
         {
-            string url =  "https://" + this.host + "/" + this.env + "/WS/" + this.company + "/Page/Klanten";
-            this.Debug(url);
-            this.soapClient = new Klanten_Soap_Client(url);
-            NetworkCredential netCredential = new NetworkCredential(this.username, this.password);
-            Uri uri = new Uri(url);
-            ICredentials credentials = netCredential.GetCredential(uri, "Basic");
-            this.soapClient.Credentials = credentials;
-            this.soapClient.PreAuthenticate = true;
+            this.soapClient = new Klanten_Soap_Client(this.host,
+                                                      this.env,
+                                                      this.company,
+                                                      this.username,
+                                                      this.password);
         }
 
         [When(@"I fetch the first (.*) records from the SOAP endpoint")]

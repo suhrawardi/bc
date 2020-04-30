@@ -4,13 +4,19 @@
     using System.Text;
     using System.Web.Services;
     
-    public partial class Klanten_Soap_Client : bc.Specs.Utilities.Soap.Generated.Klanten_Service {
-        public Klanten_Soap_Client(string url) {
-            this.Url = url;
+    public partial class Klanten_Soap_Client : Generated.Klanten_Service {
+        public Klanten_Soap_Client(string host, string env, string company, string username, string password) {
+            this.Url =  "https://" + host + "/" + env + "/WS/" + company + "/Page/Klanten";
+
+            NetworkCredential netCredential = new NetworkCredential(username, password);
+            ICredentials credentials = netCredential.GetCredential(new Uri(this.Url), "Basic");
+
+            this.Credentials = credentials;
+            this.PreAuthenticate = true;
         }
 
         protected override System.Net.WebRequest GetWebRequest(Uri uri) {
-            HttpWebRequest request = (HttpWebRequest)base.GetWebRequest(uri);
+            HttpWebRequest request = (HttpWebRequest) base.GetWebRequest(uri);
             if (PreAuthenticate) {
                 NetworkCredential networkCredentials = Credentials.GetCredential(uri, "Basic");
                 if (networkCredentials != null) {
