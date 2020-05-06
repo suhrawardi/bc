@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[1.0.0, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "ObjectDumper": {
               "target": "Package",
               "version": "[1.0.0.12, )"

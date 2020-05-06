@@ -1,4 +1,5 @@
 using ObjectDumper;
+using Newtonsoft.Json;
 using NLog;
 using System;
 using System.Net;
@@ -38,6 +39,13 @@ namespace bc.Specs.Steps
         public void Debug(String value)
         {
             logger.Debug(value);
+        }
+
+        public void Debug(Array value)
+        {
+            string json = JsonConvert.SerializeObject(value, Formatting.Indented);
+            Console.WriteLine(json);
+            logger.Debug(json);
         }
 
         public void Debug(Object value)
