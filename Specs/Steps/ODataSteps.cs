@@ -7,7 +7,7 @@ using Xunit;
 namespace bc.Specs.Steps
 {
     [Binding]
-    public class SoapSteps : BaseSteps
+    public class ODataSteps : BaseSteps
     {
         protected string username;
         protected string password;
@@ -15,13 +15,13 @@ namespace bc.Specs.Steps
         protected string env;
         protected string company;
 
-        public SoapSteps(FeatureContext featureContext,
+        public ODataSteps(FeatureContext featureContext,
                          ScenarioContext scenarioContext) :
                          base(featureContext, scenarioContext)
         {
             this.username = this.GetEnv("NAV_USER");
             this.password = this.GetEnv("NAV_PASSWORD");
-            this.host = this.GetEnv("SOAP_HOST");
+            this.host = this.GetEnv("ODATA_HOST");
             this.env = this.GetEnv("ENVIRONMENT");
             this.company = this.GetEnv("COMPANY");
         }

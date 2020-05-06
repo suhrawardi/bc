@@ -8,10 +8,10 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="1.4.0" />
-    <PackageReference Include="Microsoft.OData.Client" Version="7.6.4" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="nlog" Version="4.7.0" />
     <PackageReference Include="ObjectDumper" Version="1.0.0.12" />
+    <PackageReference Include="Simple.OData.Client" Version="5.12.0" />
     <Reference Include="System.Web.Services" />
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
     <PackageReference Include="Linq" Version="0.2">
