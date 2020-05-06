@@ -121,6 +121,49 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.OData.Client/7.6.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OData.Core": "[7.6.4]"
+        },
+        "compile": {
+          "lib/net45/Microsoft.OData.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.OData.Client.dll": {}
+        }
+      },
+      "Microsoft.OData.Core/7.6.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OData.Edm": "[7.6.4]",
+          "Microsoft.Spatial": "[7.6.4]"
+        },
+        "compile": {
+          "lib/portable-net45+win8+wpa81/Microsoft.OData.Core.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/Microsoft.OData.Core.dll": {}
+        }
+      },
+      "Microsoft.OData.Edm/7.6.4": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wpa81/Microsoft.OData.Edm.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/Microsoft.OData.Edm.dll": {}
+        }
+      },
+      "Microsoft.Spatial/7.6.4": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wpa81/Microsoft.Spatial.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/Microsoft.Spatial.dll": {}
+        }
+      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1238,6 +1281,66 @@
         "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json"
+      ]
+    },
+    "Microsoft.OData.Client/7.6.4": {
+      "sha512": "HZkcwoDMFaM2IHLi9qwox9IhC/ZRKfnPj+GWMkH2ysrUXL6nGeDS0gqiwB8YCQZ36RyQ7C+NirxuNFXKCRIXXw==",
+      "type": "package",
+      "path": "microsoft.odata.client/7.6.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.OData.Client.dll",
+        "lib/net45/Microsoft.OData.Client.xml",
+        "lib/netstandard1.1/Microsoft.OData.Client.dll",
+        "lib/netstandard1.1/Microsoft.OData.Client.xml",
+        "microsoft.odata.client.7.6.4.nupkg.sha512",
+        "microsoft.odata.client.nuspec"
+      ]
+    },
+    "Microsoft.OData.Core/7.6.4": {
+      "sha512": "/EjnJezMBjXf8OjcShhGzPY7pOO0CopgoZGhS6xsP3t2uhC+O72IBHgtQ7F3v1rRXWVtJwLGhzE1GfJUlx3c4Q==",
+      "type": "package",
+      "path": "microsoft.odata.core/7.6.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Microsoft.OData.Core.dll",
+        "lib/netstandard1.1/Microsoft.OData.Core.xml",
+        "lib/portable-net45+win8+wpa81/Microsoft.OData.Core.dll",
+        "lib/portable-net45+win8+wpa81/Microsoft.OData.Core.xml",
+        "microsoft.odata.core.7.6.4.nupkg.sha512",
+        "microsoft.odata.core.nuspec"
+      ]
+    },
+    "Microsoft.OData.Edm/7.6.4": {
+      "sha512": "MSSmA6kIfpgFTtNpOnnayoSj/6KSzHC1U9KOjF7cTA1PG4tZ7rIMi1pvjFc8CmYEvP4cxGl/+vrCn+HpK26HTQ==",
+      "type": "package",
+      "path": "microsoft.odata.edm/7.6.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Microsoft.OData.Edm.dll",
+        "lib/netstandard1.1/Microsoft.OData.Edm.xml",
+        "lib/portable-net45+win8+wpa81/Microsoft.OData.Edm.dll",
+        "lib/portable-net45+win8+wpa81/Microsoft.OData.Edm.xml",
+        "microsoft.odata.edm.7.6.4.nupkg.sha512",
+        "microsoft.odata.edm.nuspec"
+      ]
+    },
+    "Microsoft.Spatial/7.6.4": {
+      "sha512": "3mB+Frn4LU4yb5ie9R752QiRn0Hvp9PITkSRofV/Lzm9EyLM87Fy9ziqgz75O/c712dh6GxuypMSBUGmNFwMeA==",
+      "type": "package",
+      "path": "microsoft.spatial/7.6.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Microsoft.Spatial.dll",
+        "lib/netstandard1.1/Microsoft.Spatial.xml",
+        "lib/portable-net45+win8+wpa81/Microsoft.Spatial.dll",
+        "lib/portable-net45+win8+wpa81/Microsoft.Spatial.xml",
+        "microsoft.spatial.7.6.4.nupkg.sha512",
+        "microsoft.spatial.nuspec"
       ]
     },
     "Microsoft.Win32.Primitives/4.3.0": {
@@ -4551,6 +4654,7 @@
       "DotNetSeleniumExtras.WaitHelpers >= 3.11.0",
       "Linq >= 0.2.0",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
+      "Microsoft.OData.Client >= *",
       "Net >= 1.0.0",
       "Newtonsoft.Json >= 12.0.3",
       "ObjectDumper >= 1.0.0.12",
@@ -4620,6 +4724,10 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[15.9.0, )"
+          },
+          "Microsoft.OData.Client": {
+            "target": "Package",
+            "version": "[*, )"
           },
           "Net": {
             "target": "Package",

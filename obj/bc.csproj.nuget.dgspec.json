@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[15.9.0, )"
             },
+            "Microsoft.OData.Client": {
+              "target": "Package",
+              "version": "[*, )"
+            },
             "Net": {
               "target": "Package",
               "version": "[1.0.0, )"
