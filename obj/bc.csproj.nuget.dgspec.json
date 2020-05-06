@@ -88,6 +88,10 @@
               "target": "Package",
               "version": "[0.0.2, )"
             },
+            "nlog": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.1, )"

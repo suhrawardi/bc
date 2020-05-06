@@ -2,7 +2,6 @@ using System;
 using System.Net;
 using TechTalk.SpecFlow;
 using Xunit;
-using Xunit.Abstractions;
 
 using bc.Specs.Utilities.Soap;
 using bc.Specs.Utilities.Soap.Generated;
@@ -17,9 +16,8 @@ namespace bc.Specs.Steps
         private Klanten[] result;
 
         public KlantenSoapServiceSteps(FeatureContext featureContext,
-                                       ScenarioContext scenarioContext,
-                                       ITestOutputHelper testOutputHelper) :
-                                       base(featureContext, scenarioContext, testOutputHelper) { }
+                                       ScenarioContext scenarioContext) :
+                                       base(featureContext, scenarioContext) { }
 
         [Given(@"a klanten SOAP endpoint")]
         public void GivenAContractDetailsSoapEndpoint()
@@ -40,7 +38,7 @@ namespace bc.Specs.Steps
         [Then(@"I received (.*) records")]
         public void ThenIReceivedRecords(int nrOfRecords)
         {
-            this._testOutputHelper.WriteLine(this.result.Length.ToString());
+            Info(this.result.Length.ToString());
             Assert.Equal(this.result.Length, nrOfRecords);
         }
     }

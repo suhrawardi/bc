@@ -2,7 +2,6 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using Xunit;
-using Xunit.Abstractions;
 using System;
 using System.IO;
 using TechTalk.SpecFlow;
@@ -21,9 +20,8 @@ namespace bc.Specs.Steps
         private bc.Specs.Utilities.Browser.Chromium browser;
 
         public BrowserSteps(FeatureContext featureContext,
-                            ScenarioContext scenarioContext,
-                            ITestOutputHelper testOutputHelper) :
-                            base(featureContext, scenarioContext, testOutputHelper)
+                            ScenarioContext scenarioContext) :
+                            base(featureContext, scenarioContext)
         {
             this.browser = new bc.Specs.Utilities.Browser.Chromium();
 

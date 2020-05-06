@@ -1,11 +1,15 @@
 /.env
 /.vs
 
-/Specs/*.feature.cs
+/bin/Debug/**/*.dll
+/bin/Debug/**/*.exe
+/bin/Debug/**/*.pdb
 
-/bin/Debug
 /obj/Debug
+
+/Specs/*.feature.cs
 
 /obj/project.nuget.cache
 
 /report/screenshots/*.png
+/report/log/*.log

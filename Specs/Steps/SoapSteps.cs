@@ -2,7 +2,6 @@ using System;
 using System.Net;
 using TechTalk.SpecFlow;
 using Xunit;
-using Xunit.Abstractions;
 
 using bc.Specs.Utilities.Soap;
 using bc.Specs.Utilities.Soap.Generated;
@@ -20,9 +19,8 @@ namespace bc.Specs.Steps
         protected string company;
 
         public SoapSteps(FeatureContext featureContext,
-                         ScenarioContext scenarioContext,
-                         ITestOutputHelper testOutputHelper) :
-                         base(featureContext, scenarioContext, testOutputHelper)
+                         ScenarioContext scenarioContext) :
+                         base(featureContext, scenarioContext)
         {
             this.username = this.GetEnv("NAV_USER");
             this.password = this.GetEnv("NAV_PASSWORD");

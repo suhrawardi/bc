@@ -1,7 +1,7 @@
+using NLog;
 using System;
 using System.Net;
 using TechTalk.SpecFlow;
-using Xunit.Abstractions;
 
 
 namespace bc.Specs.Steps
@@ -9,17 +9,16 @@ namespace bc.Specs.Steps
     [Binding]
     public class BaseSteps
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         protected FeatureContext _featureContext;
         protected ScenarioContext _scenarioContext;
-        protected ITestOutputHelper _testOutputHelper;
         protected String _projectDir;
 
         public BaseSteps(FeatureContext featureContext,
-                         ScenarioContext scenarioContext,
-                         ITestOutputHelper testOutputHelper) {
+                         ScenarioContext scenarioContext) {
             this._featureContext = featureContext;
             this._scenarioContext = scenarioContext;
-            this._testOutputHelper = testOutputHelper;
             this._projectDir =  System.IO.Path.GetFullPath(@"..\..\..\");
 
             DotNetEnv.Env.Load(this._projectDir + ".env");
@@ -30,9 +29,14 @@ namespace bc.Specs.Steps
             return DotNetEnv.Env.GetString(key);
         }
 
+        public void Info(String value)
+        {
+            logger.Info(value);
+        }
+
         public void Debug(String value)
         {
-            this._testOutputHelper.WriteLine(value);
+            logger.Debug(value);
         }
     }
 }
