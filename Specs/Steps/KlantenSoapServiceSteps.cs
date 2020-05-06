@@ -39,6 +39,7 @@ namespace bc.Specs.Steps
         public void ThenIReceivedRecords(int nrOfRecords)
         {
             Info(this.result.Length.ToString());
+            Debug(this.result);
             Assert.Equal(this.result.Length, nrOfRecords);
         }
     }

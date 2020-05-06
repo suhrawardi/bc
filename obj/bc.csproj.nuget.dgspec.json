@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[1.0.0, )"
             },
+            "ObjectDumper": {
+              "target": "Package",
+              "version": "[1.0.0.12, )"
+            },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
               "version": "[81.0.4044.6900, )"

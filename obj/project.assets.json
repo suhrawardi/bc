@@ -207,6 +207,15 @@
           "lib/net45/NLog.dll": {}
         }
       },
+      "ObjectDumper/1.0.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/net35-Client/ObjectDumper.dll": {}
+        },
+        "runtime": {
+          "lib/net35-Client/ObjectDumper.dll": {}
+        }
+      },
       "Selenium.WebDriver/3.141.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1332,6 +1341,18 @@
         "lib/xamarinios10/NLog.xml",
         "nlog.4.7.0.nupkg.sha512",
         "nlog.nuspec"
+      ]
+    },
+    "ObjectDumper/1.0.0.12": {
+      "sha512": "APCoQT264RI7QwFyRp9VghFCQCnnH1zE3EIDcEHNa3l3jmLsZeRuyCs1h77/Rj8AKx/V708W3bE/klf0QG3NAQ==",
+      "type": "package",
+      "path": "objectdumper/1.0.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35-Client/ObjectDumper.dll",
+        "objectdumper.1.0.0.12.nupkg.sha512",
+        "objectdumper.nuspec"
       ]
     },
     "Selenium.WebDriver/3.141.0": {
@@ -4491,6 +4512,7 @@
       "Linq >= 0.2.0",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Net >= 1.0.0",
+      "ObjectDumper >= 1.0.0.12",
       "Selenium.WebDriver.ChromeDriver >= 81.0.4044.6900",
       "Selenium.Webdriver >= 3.141.0",
       "ServiceModel >= 1.0.0",
@@ -4561,6 +4583,10 @@
           "Net": {
             "target": "Package",
             "version": "[1.0.0, )"
+          },
+          "ObjectDumper": {
+            "target": "Package",
+            "version": "[1.0.0.12, )"
           },
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",

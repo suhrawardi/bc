@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="1.4.0" />
     <PackageReference Include="nlog" Version="4.7.0" />
+    <PackageReference Include="ObjectDumper" Version="1.0.0.12" />
     <Reference Include="System.Web.Services" />
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
     <PackageReference Include="Linq" Version="0.2">

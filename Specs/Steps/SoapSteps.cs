@@ -32,9 +32,6 @@ namespace bc.Specs.Steps
         [BeforeScenario(Order = 0)]
         public void DoItBeforeHand()
         {
-            this.Debug(this.username);
-            this.Debug(this.password);
-            this.Debug(this.env);
             this.Debug(this.host);
         }
     }

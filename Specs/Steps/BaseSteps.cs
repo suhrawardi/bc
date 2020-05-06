@@ -1,3 +1,4 @@
+using ObjectDumper;
 using NLog;
 using System;
 using System.Net;
@@ -37,6 +38,13 @@ namespace bc.Specs.Steps
         public void Debug(String value)
         {
             logger.Debug(value);
+        }
+
+        public void Debug(Object value)
+        {
+            var writer = new System.IO.StringWriter();
+            Dumper.Dump(value, "Object Dumper", writer);
+            logger.Debug(writer);
         }
     }
 }
