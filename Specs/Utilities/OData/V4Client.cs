@@ -10,11 +10,11 @@
         private static Logger logger = LogManager.GetCurrentClassLogger();
         public ODataClient Client { get; }
 
-        public V4Client(string host, string env, string company, string username, string password) {
-            this.Url = "https://" + host + "/" + env + "/ODataV4/";
+        public V4Client(ODataConfig config) {
+            this.Url = "https://" + config.host + "/" + config.env + "/ODataV4/";
             logger.Debug(this.Url);
 
-            NetworkCredential netCredential = new NetworkCredential(username, password);
+            NetworkCredential netCredential = new NetworkCredential(config.username, config.password);
             ICredentials credentials = netCredential.GetCredential(new Uri(this.Url), "Basic");
             this.Client = new ODataClient(new ODataClientSettings(this.Url, credentials)
             {

@@ -22,11 +22,7 @@ namespace bc.Specs.Steps
         [Given(@"a klanten SOAP endpoint")]
         public void GivenAContractDetailsSoapEndpoint()
         {
-            this.soapClient = new KlantenServiceClient(this.host,
-                                                       this.env,
-                                                       this.company,
-                                                       this.username,
-                                                       this.password);
+            this.soapClient = new KlantenServiceClient(this.config);
         }
 
         [When(@"I fetch the first (.*) records from the SOAP endpoint")]

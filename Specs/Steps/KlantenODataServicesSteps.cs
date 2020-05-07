@@ -25,11 +25,7 @@ namespace bc.Specs.Steps
         [Given(@"a klanten ODATA endpoint")]
         public void GivenAContractDetailsODataEndpoint()
         {
-            this.odataClient = new V4Client(this.host,
-                                            this.env,
-                                            this.company,
-                                            this.username,
-                                            this.password).Client;
+            this.odataClient = new V4Client(this.config).Client;
         }
 
         [When(@"I fetch the first (.*) records from the ODATA endpoint")]
@@ -37,7 +33,7 @@ namespace bc.Specs.Steps
         {
             this.result = Task.Run(async () =>
                 await this.odataClient
-                    .FindEntriesAsync("Company('" + this.company + "')/Klanten?$top=3")
+                    .FindEntriesAsync("Company('" + this.config.company + "')/Klanten?$top=3")
             ).Result;
         }
 
